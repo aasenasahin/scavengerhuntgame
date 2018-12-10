@@ -1,95 +1,91 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
 <title>Scavenger Hunt Game</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-</style>
-<body>
 
-<!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-xxxlarge">Scavenger Hunt Game Using BLE Beacon</h1>
-</header>
-
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-	<h3>Welcome to Our Project</h3>
-      <p>This website provides information about our project which is called "Scavenger Hunt Game."</p>
-	  <p>Beacons refer to a type of low-cost, location-based technology that uses Bluetooth low energy (BLE 4.0) protocol to communicate with beacon-enabled devices. 
-	  It is a low-cost piece of hardware that acts as stickers and can be inserted on walls or objects. 
-	  In other words, Beacons have inbuilt batteries which provide them long read-ranges. 
-	  Beacon technology enables smartphones to receive notifications or perform actions when in close proximity of an iBeacon. 
-	  It was Apple that introduced this technology (iBeacon) in 2013. 
-	  However, Apple does not make beacons; in fact, it has developed the iBeacon standard around which beacons can be built.
-	  Similarly, Google has its Beacon standard, namely Eddystone. In this project, (1) a mobile "Scavenger Hunt" game, 
-	  (2) a service-based web application that the app is built on top of it for iBeacons, which makes it possible to do all your app's configuration on the web will be developed. 
-	  Scavenger Hunt is a fun game where several teams earn points by doing jobs in the task list given to them. 
-	  The beauty of the game is to collect the highest points by doing the jobs specified in the city, campus or a specific area. 
-	  The basic idea of scavenger game type is that you can make the locations appear on the map according to specific rules. 
-	  Players see some of the locations at the start of the game (according to the game creator plans anywhere from one to all locations). 
-	  Scavenger game type can be set up so that each team sees only one location and every team see different location (rotate start fields). 
-	  A question pops up when a player is at the correct place. Other locations will appear on the map according to a timer (minutes from the game start) or according to the rules after answering specific questions. 
-	  A good selection strategy is a critical factor of the game due to the time limitation. What are these tasks?</p>
-      <p>Sample Task: go to the library The task details appear when you approach the pre-installed iBeacon in the library: Take a snapshot of Deitel's Java book cover (50 points)</p>
-      <p>Sample Task: go to the gym When you get closer to the pre-installed iBeacon in the gym, the task details appear: Play basketball in the gym for 30 minutes (70 points)</p>
-      <p>With scavenger game type you can build very flexible games. In this project, students are expected to design a fun game by showing their creativity.</p>
-	
-	<h3>Our Documents</h3>
-	    <p>You can use <a href="https://github.com/CankayaUniversity/ceng-407-408-Scavenger-Hunt-Game-Using-BLE-Beacon/wiki/Literature-Review">this link</a> to see our Literature Review document.</p>
-		<p>You can use <a href="https://github.com/CankayaUniversity/ceng-407-408-Scavenger-Hunt-Game-Using-BLE-Beacon/wiki/Software-Requirements-Specification">this link</a> to see our SRS document.</p>
-	
-	<h3>Our Team Members</h3>
-		<ul>
-			<li>Ümmügülsüm KAŞIKÇI</li>
-			<li>Aslıhan Asena ŞAHİN</li>
-			<li>Nuri AKSELİ</li>
-		</ul>
-	
-	<h3>Our Advisor</h3>
-		<ul>
-			<li>Dr. Instructor Murat SARAN</li>
-		</ul>
-	
-	<p>Thanks Murat Saran for contributions.</p>
-
-
-	</div>
-
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-	<p class="copyright">This project maintained by <a 
-	href="https://github.com/yesimkaskc">Ümmügülsüm KAŞIKÇI</a>, <a 
-	href="https://github.com/aasenasahin">Aslıhan Asena ŞAHİN</a>, <a 
-	href="https://github.com/nuriakseli">Nuri AKSELİ</a> and <a 
-        
-        <p>Hosted on <a href="https://pages.github.com">GitHub Pages.</a></p>
-
-
-</footer>
-
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
+#header{
+	margin-top:-1%;
+	position:fixed;
+	background-color: #16CBC8;
+	width: 100%;
+	padding-bottom:1%;
 }
-</script>
+#banner{
+	position: fixed;
+	background-color: orange;
+	width: 75%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 1%;
+	margin-top:4%;
+}
+#button{
+	background-color: #CAE40E;
+	padding: 0.5%;
+	border:#BCC704
+}
+
+a.button{
+	text-decoration:none;
+	color:white;
+}
+#text{
+	position:absolute;
+	background-color:white;
+	width:60%;
+	z-index:-1;
+	margin-top:5%;
+	margin-left:20%;
+	padding-left:2%;
+	padding-right:2%;
+	padding-bottom:2%;
+}
+
+
+#last{
+	margin-top:60%;
+	position:absolute;
+	z-index:-1;
+	margin-left:50%;
+}
+</style>
+</head>
+
+<body bgcolor="#ECECEC">
+	<div id="header">
+    	<h1 align="center"><font color="white">Scavengerhuntgame.github.io</font></h1>
+        		<p></p><br>
+    </div>
+    <div id="banner" align="left" >
+                    	<a class="button" id="button" href="https://github.com/CankayaUniversity/ceng-407-408-Scavenger-Hunt-Game-Using-BLE-Beacon"> 
+                    			<strong>View on Github</strong>
+                            </a></div>
+	<div id="text">
+    <p></p>
+    <br>
+  		<h1 align="center">Welcome to Our Project</h1>
+      	<p>&nbsp; &nbsp;This website provides information about our project which is called 'Scavenger Hunt Game.'</p><br>
+      	<p> &emsp;Beacons refer to a type of low-cost, location-based technology that uses Bluetooth low energy (BLE 4.0) protocol to communicate with beacon-enabled devices. It is a low-cost piece of hardware that acts as stickers and can be inserted on walls or objects. In other words, Beacons have inbuilt batteries which provide them long read-ranges. Beacon technology enables smartphones to receive notifications or perform actions when in close proximity of an iBeacon. It was Apple that introduced this technology (iBeacon) in 2013. However, Apple does not make beacons; in fact, it has developed the iBeacon standard around which beacons can be built.
+Similarly, Google has its Beacon standard, namely Eddystone. In this project, (1) a mobile "Scavenger Hunt" game, (2) a service-based web application that the app is built on top of it for iBeacons, which makes it possible to do all your app's configuration on the web will be developed. Scavenger Hunt is a fun game where several teams earn points by doing jobs in the task list given to them. The beauty of the game is to collect the highest points by doing the jobs specified in the city, campus or a specific area. The basic idea of scavenger game type is that you can make the locations appear on the map according to specific rules. Players see some of the locations at the start of the game (according to the game creator plans anywhere from one to all locations). Scavenger game type can be set up so that each team sees only one location and every team see different location (rotate start fields). A question pops up when a player is at the correct place. Other locations will appear on the map according to a timer (minutes from the game start) or according to the rules after answering specific questions. A good selection strategy is a critical factor of the game due to the time limitation. What are these tasks?</p>
+      <br>Sample Task: go to the library The task details appear when you approach the pre-installed iBeacon in the library: Take a snapshot of Deitel's Java book cover (50 points)</br>
+      <p><br> Sample Task: go to the gym When you get closer to the pre-installed iBeacon in the gym, the task details appear: Play basketball in the gym for 30 minutes (70 points)</br></p>
+      <p><br>With scavenger game type you can build very flexible games. In this project, students are expected to design a fun game by showing their creativity.</br></p>
+    <h2 align="center" id="doc">Our Documents</h2>
+    You can use the <a href="https://github.com/CankayaUniversity/ceng-407-408-Scavenger-Hunt-Game-Using-BLE-Beacon/wiki/Literature-Review">this link</a> to see our literature document.<br>
+    You can use the <a href="https://github.com/CankayaUniversity/ceng-407-408-Scavenger-Hunt-Game-Using-BLE-Beacon/wiki/Software-Requirements-Specification">this link</a> to see our SRS document.
+	<h2 align="center"><a name="members">Our Team Members</a></h2>
+    1.Ümmügülsüm KAŞIKÇI
+    <p>2.Aslıhan Asena ŞAHİN</p>
+    <p>3.Nuri AKSELİ</p>
+	<h2 align="center" id="advisor">Our Advisor</h2>
+    <p>Advisor: Dr. Instructor Murat SARAN</p>
+    <p>Thanks Murat Saran for contributions.</p>
+ </div>
+  
+  <div id="last">
+  	<p align="center">Hosted on GitHub Pages</p>
+  </div>
 
 </body>
 </html>
