@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+
+## Welcome to Our Project
 
 You can use the [editor on GitHub](https://github.com/aasenasahin/scavengerhuntgame.github.io/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
 
